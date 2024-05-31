@@ -44,12 +44,12 @@ fork to your machine using one of the commands below, depending on your OS.
 #### Clone nvim
 > **NOTE**
 > If following the recommended step above (i.e., forking the repo), replace
-> `WasathTheekshana` with `<your_github_username>` in the commands below
+> `Shenon69` with `<your_github_username>` in the commands below
 
 <details><summary> Linux and Mac </summary>
 
 ```sh
-git clone https://github.com/WasathTheekshana/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+git clone https://github.com/Shenon69/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
 
 </details>
@@ -59,13 +59,13 @@ git clone https://github.com/WasathTheekshana/nvim.git "${XDG_CONFIG_HOME:-$HOME
 If you're using `cmd.exe`:
 
 ```
-git clone https://github.com/WasathTheekshana/nvim.git %userprofile%\AppData\Local\nvim\
+git clone https://github.com/Shenon69/nvim.git %userprofile%\AppData\Local\nvim\
 ```
 
 If you're using `powershell.exe`
 
 ```
-git clone https://github.com/WasathTheekshana/nvim.git $env:USERPROFILE\AppData\Local\nvim\
+git clone https://github.com/Shenon69/nvim.git $env:USERPROFILE\AppData\Local\nvim\
 ```
 
 </details>
