@@ -8,17 +8,11 @@ return {
 		"rcarriga/nvim-notify",
 	},
 	config = function()
-		-- Define a highlight group with a background color
-		vim.cmd("highlight NotifyBackground guibg=#000000")
-
-		-- Require and setup 'notify' with the background color highlight group
-		local notify = require("notify")
-		notify.setup({
-			background_colour = "NotifyBackground", -- Use the defined highlight group
-		})
-
-		-- Additional configurations for 'noice.nvim' can go here if needed
 		require("noice").setup({
+			notify = {
+				enabled = true,
+				view = "notify",
+			},
 			lsp = {
 				-- Override markdown rendering to use Treesitter for **cmp** and other plugins
 				override = {
@@ -35,10 +29,18 @@ return {
 				inc_rename = false, -- Disable an input dialog for inc-rename.nvim
 				lsp_doc_border = true, -- Add a border to hover docs and signature help
 			},
-			-- Example of adding a new configuration:
-			-- notifications = {
-			--   background_colour = "#1e222a",  -- Set a custom background color for notifications
-			-- },
+		})
+
+		-- Setup nvim-notify with custom styling
+		require("notify").setup({
+			background_colour = "#000000",
+			timeout = 3000,
+			max_height = function()
+				return math.floor(vim.o.lines * 0.75)
+			end,
+			max_width = function()
+				return math.floor(vim.o.columns * 0.75)
+			end,
 		})
 	end,
 }
